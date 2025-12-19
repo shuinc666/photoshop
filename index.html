@@ -26,11 +26,46 @@
                background-color: #153863; 
 
 		   }
-		 
+		  #helpBtn {
+    /* 基础尺寸与居中（和原生按钮一致） */
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: medium;
+    cursor: pointer;
+
+    /* 核心：强化按钮视觉特征（一眼看出是按钮） */
+    background-color: #555657; /* 主色调（蓝色按钮，更醒目） */
+    color: white !important;   /* 白色文字，对比强烈 */
+    border: none;              /* 去掉默认边框，用阴影强化按钮感 */
+    border-radius: 6px;        /* 圆角更圆润，符合现代按钮设计 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 轻微阴影，突出立体感 */
+    text-decoration: none;     /* 彻底去掉链接下划线 */
+
+    /* 交互强化：hover/点击有明显反馈 */
+    transition: all 0.2s ease;
+  }
+
+  /* 鼠标悬浮：变深+阴影变大，按钮“浮起来”的感觉 */
+			#helpBtn:hover {
+				background-color: #3a3b3b;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+				transform: translateY(-1px); /* 轻微上移，增强交互感 */
+			}
+
+  /* 点击时：恢复原位+压暗，模拟按钮按下 */
+			#helpBtn:active {
+				background-color: #38393a;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+				transform: translateY(0);
+			}
 
 
 	</style>
-	<script src="dist/bundle.js" async></script>
+
+<script src="dist/bundle.js" async></script>
 
 
 </head>
@@ -97,17 +132,17 @@
 			</div>
 		</div>
 		<div>
-  <button id="helpBtn" style="width: 100px;height: 50px;cursor: pointer;font-size:medium;">
+<a id="helpBtn" href="https://www.freephotoshop.top/Tutorial%20Center.html" target="_blank">
     Tutorial Center
-  </button>
+</a>
 </div>
 
 <!-- JS单独写，无内联，冒号不会报红 -->
-<script>
+<!-- <script>
   document.getElementById('helpBtn').addEventListener('click', function() {
-    window.open('https://www.freephotoshop.top/Tutorial%20Center.html', '_blank'); // 这里的冒号编辑器能正确识别
+    window.open('http://127.0.0.1:5501/Tutorial%20Center.html', '_blank'); // 这里的冒号编辑器能正确识别
   });
-</script>
+</script> -->
 		
 	</div>
 	
@@ -124,3 +159,4 @@
 </body>
 
 </html>
+
