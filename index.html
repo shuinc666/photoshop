@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- 谷歌核心：标题（SEO第一优先级，控制在60字符内） -->
+	<title>Free Image Editor|No registration|No installation|photoshop</title>
+	<!-- 谷歌核心：字符编码 + IE兼容（基础技术配置） -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<!-- 谷歌核心：页面描述（搜索结果展示，控制在150字符内） -->
+	<meta name="description" content="Online Photoshop's main advantages are that it's free, requires no registration, requires no installation, and is lightweight." />
+	<!-- 谷歌核心：关键词（辅助收录，精简核心词即可） -->
+	<meta name="keywords" content="No installation required. Photopea, images, pictures, transparency, layers, editing, Photoshop, GIMP, online tools, online, free, no registration required." />
+	<!-- 谷歌核心：响应式视口（移动端排名必备） -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, user-scalable=yes" />
+    <!-- 谷歌核心：规范网址（避免重复收录，必留） -->
+	<link rel="canonical" href="https://freephotoshop.top">
+	<!-- 谷歌富文本补充：用于搜索结果展示图片/更丰富的信息（可选但推荐） -->
+    <meta itemprop="name" content="Free Online Photoshop Editor - No Registration">
+	<meta itemprop="description" content="Free|No registration|No installation|Online Photoshop is a Free photo editor . Edit, adjust, and add effects  in your browser without installing anything" />
+	<!-- 基础资源：图标（不影响排名，但提升用户体验，谷歌不排斥） -->
+	<link rel="icon" sizes="192x192" href="images/favicon.png">
+    <style>
+           .wrapper{
+
+               background-color: #153863; 
+
+		   }
+		 
+
+
+	</style>
+	<script src="dist/bundle.js" async></script>
+
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<nav aria-label="Main Menu" class="main_menu" id="main_menu"></nav>
+
+		<div class="submenu">
+			<a class="logo" href="#">FreePS</a>
+			<div class="block attributes" id="action_attributes"></div>
+			<button class="undo_button" id="undo_button" type="button">
+				<span class="sr_only">Undo</span>
+			</button>
+		</div>
+
+		<div class="sidebar_left" id="tools_container"></div>
+
+
+		<div class="middle_area" id="middle_area">
+
+			<canvas class="ruler_left" id="ruler_left"></canvas>
+			<canvas class="ruler_top" id="ruler_top"></canvas>
+
+			<div class="main_wrapper" id="main_wrapper">
+				<div class="canvas_wrapper" id="canvas_wrapper">
+					<div id="mouse"></div>
+					<div class="transparent-grid" id="canvas_minipaint_background"></div>
+					<canvas id="canvas_minipaint">
+						<div class="trn error">
+							Your browser does not support canvas or JavaScript is not enabled.
+						</div>
+					</canvas>
+				</div>
+			</div>
+		</div>
+       
+		<div class="sidebar_right">
+			<div class="preview block">
+				<h2 class="trn toggle" data-target="toggle_preview">Preview</h2>
+				<div id="toggle_preview"></div>
+			</div>
+
+			<div class="colors block">
+				<h2 class="trn toggle" data-target="toggle_colors">Colors</h2>
+				<div class="content" id="toggle_colors"></div>
+			</div>
+
+			<div class="block" id="info_base">
+				<h2 class="trn toggle toggle-full" data-target="toggle_info">Information</h2>
+				<div class="content" id="toggle_info"></div>
+			</div>
+
+			<div class="details block" id="details_base">
+				<h2 class="trn toggle toggle-full" data-target="toggle_details">Layer details</h2>
+				<div class="content details-content" id="toggle_details"></div>
+			</div>
+
+			<div class="layers block">
+				<h2 class="trn">Layers</h2>
+				<div class="content" id="layers_base"></div>
+			</div>
+		</div>
+		<div>
+  <button id="helpBtn" style="width: 100px;height: 50px;cursor: pointer;font-size:medium;">
+    Tutorial Center
+  </button>
+</div>
+
+<!-- JS单独写，无内联，冒号不会报红 -->
+<script>
+  document.getElementById('helpBtn').addEventListener('click', function() {
+    window.open('http://127.0.0.1:5501/Tutorial%20Center.html', '_blank'); // 这里的冒号编辑器能正确识别
+  });
+</script>
+		
+	</div>
+	
+	<div class="mobile_menu">
+		<button class="left_mobile_menu" id="left_mobile_menu_button" type="button">
+			<span class="sr_only">Toggle Menu</span>
+		</button>
+		<button class="right_mobile_menu" id="mobile_menu_button" type="button">
+			<span class="sr_only">Toggle Menu</span>
+		</button>
+	</div>
+	<div class="hidden" id="tmp"></div>
+	<div id="popups"></div>
+</body>
+
+</html>
