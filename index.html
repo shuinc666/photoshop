@@ -27,25 +27,24 @@
                background-color: #153863; 
 
 		   }
-		.xxx{
-			  background-color:#494b4d ;
-              width: 50px;
-			  height: 50px;
-			  
-
-
-		}
-		#helpBtn{
-  display: inline-block;   /* 关键：让它能设宽高 */
-  width: 100px;
-  height: 100px;
-  line-height: 100px;      /* 行高 = 高度 → 垂直居中 */
-  text-align: center;      /* 水平居中 */
-  /* 下面只是装饰，可删 */
-  background: #000;
+		
+#helpBtn{
+  /* 基础按钮壳 */
+  display: inline-flex;          /* 或 inline-block 也行 */
+  align-items: center;           /* 垂直居中 */
+  justify-content: center;       /* 水平居中 */
+  padding: 12px 24px;            /* 上下 左右留白 → 整体就是按钮尺寸 */
+  background: #0078ff;
   color: #fff;
-  text-decoration: none;
   border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  /* 如果想再立体一点 */
+  box-shadow: 0 2px 4px rgba(0,0,0,.15);
+  transition: background .2s;
+}
+#helpBtn:hover{
+  background: #0059c1;
 }
 		 
 	</style>
@@ -130,7 +129,7 @@
 				<div class="content" id="layers_base"></div>
 			</div>
 		</div>
-		<div class="xxx">
+		<div>
 <a id="helpBtn" href="/blog/"  rel="noopener"
    title="Free Photoshop tutorials & mockups – updated weekly">
   <!-- 文字对搜索引擎可见，对用户隐藏 -->
