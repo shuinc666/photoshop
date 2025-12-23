@@ -87,54 +87,6 @@ height: 100vh;
   <span class="btn-txt">Return to Photoshop</span>
 </a>
 </div>
-    <script>
-        const body = document.body;
-        // 1. 获取按钮元素
-        const psButton = document.getElementById('diyigewenben');
-        // 2. 获取页面最外层的容器（这里直接用body，也可以用zhengti）
-        const originalHTML = body.innerHTML; // 保存原始页面内容
-        
-        let isNewPage = false; 
-        // 3. 绑定点击事件
-        psButton.addEventListener('click', function() {
-            if (isNewPage) return;
-            // 清空页面所有内容，并替换为新文本
-            history.pushState({ page: 'ps-help' }, 'PS帮助', '#ps-help');
-            body.innerHTML = `
-                <div  style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; font-size: 24px;color:white;text-align: justify; /* 核心：文本两端对齐 */
-        text-justify: inter-word; /* 英文单词间距均匀 */
-        max-width: 1000px; /* 核心：固定最大宽度，所有文本等宽 */
-        margin: 0 auto; /* 居中 */
-        box-sizing: border-box;">
-                   Learning Photoshop on your own is quite simple. You can learn the basic functions and operations in a few video lessons, enough to meet your daily image editing needs.
-
-If you're learning as a hobby, you can self-study video courses and then frequently (or occasionally) use Photoshop for image modifications or simple design using templates. If you encounter something you don't know, look it up and learn it on the spot; this is sufficient for daily use.
-
-However, if you're self-studying Photoshop to quickly reach a level where you can take on freelance work and earn money, unfortunately, most people don't have that ability.
-
-Firstly, there's too much focus on quick results, and self-learning ability is limited; it's impossible to reach that level in a short time. Secondly, learning Photoshop doesn't equate to designing and creating posters, brochures, or other materials. Photoshop and design are two different things. To understand design, you need to learn methodologies and AI software.
-
-What if you only know Photoshop but don't understand professional design knowledge but still want to do design? You can find some existing templates online for reference, modify them in Photoshop, and add or remove parts of the templates. This can improve work efficiency.
-
-However, as mentioned earlier, for most people, this method can only meet their basic daily design needs.
-                </div>
-            `;
-            isNewPage = true;
-            // 如果想要极简版（仅纯文本，无样式），可以用这行替换上面的body.innerHTML：
-            // body.textContent = '点击PS后显示的新文本';
-        });
-        window.addEventListener("popstate",function (e){
-
-                 if(isNewPage){
-                  body.innerHTML = originalHTML;
-                 isNewPage = false;
-                 document.getElementById('diyigewenben').addEventListener('click', psButton.click.bind(psButton));
-
-
-                 }
-
-
-        });
-    </script>
+   
 </body>
 </html>
